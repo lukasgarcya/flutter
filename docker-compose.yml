@@ -4,4 +4,8 @@ services:
     flutter:
         image: flutter:x11
         privileged: true
-        command: /opt/android-sdk-linux/emulator/emulator -use-system-libs @teste -no-boot-anim -no-audio -no-window -writable-system -memory 2048
+        volumes:
+            - ./entrypoint.sh:/usr/bin/entrypoint.sh
+        entrypoint: /usr/bin/entrypoint.sh
+        ports:
+            - 5900:5900
