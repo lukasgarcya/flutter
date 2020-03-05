@@ -1,5 +1,6 @@
-FROM flutter
+FROM lukasgarcya/flutter:x11
 USER root
 RUN apt-get update
 RUN apt-get install -y xvfb x11vnc libnss3 libxcursor1 pulseaudio
-USER android
+RUN groupadd kvm
+RUN gpasswd -a android kvm
