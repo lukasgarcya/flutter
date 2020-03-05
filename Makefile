@@ -1,8 +1,8 @@
 build:
-	docker build -t flutter .
+	docker build -t lukasgarcya/flutter .
 
 build-x11:
-	docker build -t flutter:x11 -f Dockerfile.x11 .
+	docker build -t lukasgarcya/flutter:x11 -f Dockerfile.x11 .
 
 doctor:
 	docker run --rm -it flutter /opt/flutter/bin/flutter doctor
