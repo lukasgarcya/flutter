@@ -1,4 +1,4 @@
-FROM lukasgarcya/flutter:x11
+FROM lukasgarcya/flutter
 USER root
 RUN apt-get update
 RUN apt-get install -y xvfb x11vnc libnss3 libxcursor1 pulseaudio
