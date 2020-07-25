@@ -27,8 +27,8 @@ RUN aria2c https://dl.google.com/android/repository/commandlinetools-linux-${and
 && yes "y" | sdkmanager --sdk_root=${ANDROID_HOME} "system-images;android-30;google_apis;x86_64" \
 && echo no | avdmanager create avd -f -n teste --device "pixel_xl" -c 1G -k "system-images;android-30;google_apis;x86_64" \
 && aria2c https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v${flutter_version}.tar.xz \
-&& tar xf flutter_linux_v1.12.13+hotfix.8-stable.tar.xz \
-&& rm flutter_linux_v1.12.13+hotfix.8-stable.tar.xz \
+&& tar xf flutter_linux_v${flutter_version}.tar.xz \
+&& rm flutter_linux_v${flutter_version}.tar.xz \
 && flutter precache \
 && yes "y" | flutter doctor --android-licenses \
 && flutter doctor
